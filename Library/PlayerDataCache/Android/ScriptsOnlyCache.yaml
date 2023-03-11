@@ -4,7 +4,10 @@ ScriptsOnlyBuild:
     - Cainos.PixelArtTopDown_Basic.CameraFollow
     - Cainos.PixelArtTopDown_Basic.TopDownCharacterController
     - FixedJoystick
+    - Movement
+    - PacMove
     - Player
+    - Spawner
     Fungus.dll:
     - Fungus.Block
     - Fungus.ButtonClicked
@@ -78,8 +81,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -215,53 +220,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4892}
     - Class: 114
-      Script: {instanceID: 5016}
+      Script: {instanceID: 5018}
     - Class: 114
-      Script: {instanceID: 5136}
+      Script: {instanceID: 5138}
     - Class: 114
-      Script: {instanceID: 5232}
+      Script: {instanceID: 5234}
     - Class: 114
-      Script: {instanceID: 5236}
+      Script: {instanceID: 5238}
     - Class: 114
-      Script: {instanceID: 5344}
+      Script: {instanceID: 5346}
     - Class: 114
-      Script: {instanceID: 5408}
+      Script: {instanceID: 5410}
     - Class: 114
-      Script: {instanceID: 5414}
+      Script: {instanceID: 5416}
     - Class: 114
-      Script: {instanceID: 5532}
+      Script: {instanceID: 5534}
     - Class: 114
-      Script: {instanceID: 5580}
+      Script: {instanceID: 5582}
     - Class: 114
-      Script: {instanceID: 5728}
+      Script: {instanceID: 5730}
     - Class: 114
-      Script: {instanceID: 5744}
+      Script: {instanceID: 5746}
     - Class: 114
-      Script: {instanceID: 5752}
+      Script: {instanceID: 5754}
     - Class: 114
-      Script: {instanceID: 5820}
+      Script: {instanceID: 5822}
     - Class: 114
-      Script: {instanceID: 5900}
+      Script: {instanceID: 5902}
     - Class: 114
-      Script: {instanceID: 5938}
+      Script: {instanceID: 5940}
     - Class: 114
-      Script: {instanceID: 5944}
+      Script: {instanceID: 5946}
     - Class: 114
-      Script: {instanceID: 6094}
+      Script: {instanceID: 6096}
     - Class: 114
-      Script: {instanceID: 6208}
+      Script: {instanceID: 6212}
     - Class: 114
-      Script: {instanceID: 6284}
+      Script: {instanceID: 6288}
     - Class: 114
-      Script: {instanceID: 6304}
+      Script: {instanceID: 6308}
     - Class: 114
-      Script: {instanceID: 6604}
+      Script: {instanceID: 6608}
     - Class: 114
-      Script: {instanceID: 7118}
+      Script: {instanceID: 7122}
     - Class: 114
-      Script: {instanceID: 7132}
+      Script: {instanceID: 7136}
     - Class: 114
-      Script: {instanceID: 7598}
+      Script: {instanceID: 7602}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -332,16 +337,30 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2884}
     - Class: 114
+      Script: {instanceID: 2940}
+    - Class: 114
+      Script: {instanceID: 3532}
+    - Class: 114
       Script: {instanceID: 4494}
     - Class: 114
-      Script: {instanceID: 5344}
+      Script: {instanceID: 5010}
     - Class: 114
-      Script: {instanceID: 5408}
+      Script: {instanceID: 5138}
     - Class: 114
-      Script: {instanceID: 7132}
+      Script: {instanceID: 5410}
     - Class: 114
-      Script: {instanceID: 7598}
+      Script: {instanceID: 5416}
+    - Class: 114
+      Script: {instanceID: 6174}
+    - Class: 114
+      Script: {instanceID: 7136}
+    - Class: 114
+      Script: {instanceID: 7602}
+    - Class: 114
+      Script: {instanceID: 40958}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -372,15 +391,55 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1506}
+    - Class: 114
+      Script: {instanceID: 1508}
+    - Class: 114
+      Script: {instanceID: 1510}
+    - Class: 114
+      Script: {instanceID: 2504}
+    - Class: 114
+      Script: {instanceID: 2650}
+    - Class: 114
+      Script: {instanceID: 2884}
+    - Class: 114
+      Script: {instanceID: 2940}
+    - Class: 114
+      Script: {instanceID: 3532}
+    - Class: 114
+      Script: {instanceID: 5138}
+    - Class: 114
+      Script: {instanceID: 5410}
+    - Class: 114
+      Script: {instanceID: 5416}
+    - Class: 114
+      Script: {instanceID: 7136}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -805,7 +864,7 @@ ScriptsOnlyBuild:
     className: CameraManager
   - hash:
       serializedVersion: 2
-      Hash: 5bd9d7694f1ef574aa6de345ce999583
+      Hash: eafec220ec4ef249c4786d6922847c0d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -1873,6 +1932,12 @@ ScriptsOnlyBuild:
     className: CollisionVariable
   - hash:
       serializedVersion: 2
+      Hash: 30f3213a6e218a461fa00e428f22d3eb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Movement
+  - hash:
+      serializedVersion: 2
       Hash: 774e0f9f4a96686a3baf477b60a356a3
     assemblyName: Fungus.dll
     namespaceName: Fungus
@@ -2375,6 +2440,12 @@ ScriptsOnlyBuild:
     assemblyName: Fungus.dll
     namespaceName: Fungus
     className: Conversation
+  - hash:
+      serializedVersion: 2
+      Hash: 8dd947a80938ecd8fa4fbb8c98ec3ddc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Spawner
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -2909,10 +2980,16 @@ ScriptsOnlyBuild:
     assemblyName: Fungus.dll
     namespaceName: Fungus
     className: ObjectClicked
+  - hash:
+      serializedVersion: 2
+      Hash: f1288fafc6515fd9b14a20c41bd4430d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PacMove
   platform: 13
   scenePathNames:
   - Assets/Main/Scenes/Main menu.unity
   - Assets/Main/Scenes/Main scene.unity
   - Assets/Main/Scenes/Settings.unity
   playerPath: "C:/\u041F\u0430\u043F\u043A\u0438/\u041F\u0430\u043F\u043A\u0438/Unity
-    project/Build/Escape from Pacman(0.0.0.3).apk"
+    project/Build/Escape from Pacman(1.0.4.2).apk"

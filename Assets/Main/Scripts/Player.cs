@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float speed;
     public Joystick joystick;
     private Rigidbody2D rb;
+	public Animator animator;
     
     void Start()
     {
@@ -19,6 +20,13 @@ public class Player : MonoBehaviour
     {
         dirX = joystick.Horizontal * speed;
         dirY = joystick.Vertical * speed;
+
+		Vector3 movement = new Vector3(dirX, dirY, 0.0f);
+
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Magnitude", movement.magnitude);
     }
 
     void FixedUpdate()
